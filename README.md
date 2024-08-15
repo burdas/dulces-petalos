@@ -2,7 +2,7 @@
 ## Índice
 
 - [Enunciado de la prueba](#enunciado)
-- [Instalación](#instalación)
+- [Instalación del proyecto](#instalación)
 
 ## Enunciado
 
