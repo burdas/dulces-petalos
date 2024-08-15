@@ -21,17 +21,11 @@ function ListView() {
       .catch((error) => console.error(error));
   }, []);
 
-  // Actualizamos el listado de flores al cambiar el searchTerm o el listado de flores.
-  // En caso de que la lista de datos sea más grande sería interesante usar un debounce para evitar filtrar redundantes
-  useEffect(() => {
-    setFlowers(flowers.filter(e => e.name.includes(searchTerm) || e.binomialName.includes(searchTerm)));
-  }, [flowers, searchTerm]);
-
   return (
     <main className="container mx-auto">
       <Search setSearchTerm={setSearchTerm} />
       <section className="grid mx-auto custom-grid w-full mt-8 items-center justify-items-center">
-        {flowers.map((flower) => (
+        {flowers.filter(e => e.name.includes(searchTerm) || e.binomialName.includes(searchTerm)).map((flower) => (
           <Item key={flower.id} {...flower} />
         ))}
       </section>
