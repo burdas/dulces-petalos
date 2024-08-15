@@ -1,7 +1,13 @@
+import Header from "../components/Header"
+import ListView from "../components/ListView"
+
 function FlowerList() {
 
     return (
-      <h1>Flower List</h1>
+      <>
+        <Header />
+        <ListView />
+      </>
     )
   }
   

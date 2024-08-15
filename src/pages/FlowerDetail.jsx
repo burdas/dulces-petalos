@@ -1,7 +1,10 @@
+import Header from "../components/Header";
 function FlowerDetail() {
 
     return (
-      <h1>Flower Detail</h1>
+      <>
+        <Header />
+      </>
     )
   }
   
