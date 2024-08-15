@@ -1,18 +1,15 @@
 import { MagnifyingGlassIcon } from "@radix-ui/react-icons";
 import { useId } from "react";
-import { debounce } from "debounce";
-
-const DEBOUNCE_LIMIT = 5000;
 
 function Search({ setSearchTerm }) {
   const searchId = useId();
 
   const handleChange = (event) => {
-    debounce(setSearchTerm(event.target.value), DEBOUNCE_LIMIT);
+    setSearchTerm(event.target.value)
   };
 
   return (
-      <section className="flex flex-row justify-end items-center mt-8">
+      <section className="flex flex-row justify-center md:justify-end items-center mt-8 p-4">
         <div className="flex flex-row gap-4 items-center bg-neutral-800 text-white p-3 rounded-lg w-[300px]">
           <label htmlFor={searchId}>
             <MagnifyingGlassIcon className="text-white w-6 h-6 " />
